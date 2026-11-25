@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#050a1a">
+  <meta name="description" content="عرض تقديمي تفاعلي: الذكاء الاصطناعي — من فكرة إلى عالم يصنع المستقبل. رحلة معرفية بصرية في أحد عشر شريحة مع اختبار تفاعلي.">
+  <title>الذكاء الاصطناعي · من فكرة إلى عالم يصنع المستقبل</title>
+
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- مكتبة أيقونات SVG داخلية -->
+  <svg class="icon-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-face" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8V5.5A1.5 1.5 0 0 1 5.5 4H8M16 4h2.5A1.5 1.5 0 0 1 20 5.5V8M20 16v2.5a1.5 1.5 0 0 1-1.5 1.5H16M8 20H5.5A1.5 1.5 0 0 1 4 18.5V16"/><path d="M9 10h.01M15 10h.01M9.5 14.7a3.6 3.6 0 0 0 5 0"/></symbol>
+    <symbol id="i-data" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5.5" rx="7" ry="2.8"/><path d="M5 5.5v6c0 1.5 3.1 2.8 7 2.8s7-1.3 7-2.8v-6M5 11.5v6c0 1.6 3.1 2.9 7 2.9s7-1.3 7-2.9v-6"/></symbol>
+    <symbol id="i-pattern" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V11M10 20V5M16 20v-6M22 20V9"/><circle cx="4" cy="7" r="1.8"/><circle cx="16" cy="10" r="1.8"/></symbol>
+    <symbol id="i-puzzle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6v2.2a1.9 1.9 0 1 0 3.8 0H21v6h-2.2a1.9 1.9 0 1 0 0 3.8H21V21h-6v-2.2a1.9 1.9 0 1 0-3.8 0V21H3v-6h2.2a1.9 1.9 0 1 0 0-3.8H3V3h6z"/></symbol>
+    <symbol id="i-brain" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5A3 3 0 0 0 6.6 4 3 3 0 0 0 4 9a3 3 0 0 0 .4 5.3A3 3 0 0 0 8.7 17 3 3 0 0 0 12 19V5.5z"/><path d="M12 5.5A3 3 0 0 1 17.4 4 3 3 0 0 1 20 9a3 3 0 0 1-.4 5.3A3 3 0 0 1 15.3 17 3 3 0 0 1 12 19V5.5z"/><path d="M8 8.5h1M15 8.5h1M8.5 13h1M14.5 13h1"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 9 5-9 5-9-5 9-5zM3 12l9 5 9-5M3 16l9 5 9-5"/></symbol>
+    <symbol id="i-network" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4.5" r="2"/><circle cx="4.5" cy="12" r="2"/><circle cx="19.5" cy="12" r="2"/><circle cx="12" cy="19.5" r="2"/><path d="M10.6 6 6 10.4M13.4 6 18 10.4M6 13.6 10.6 18M18 13.6 13.4 18M6.5 12h11"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 5.5h3M9 18.5h6"/></symbol>
+    <symbol id="i-translate" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h9M7.5 4v2M10 6c0 4.5-2.7 7.7-7 9M5 9.5c1.2 2.6 3.2 4.5 6 5.5M13 20l4-9 4 9M14.6 17h4.8"/></symbol>
+    <symbol id="i-assistant" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="12" rx="3"/><path d="M9 20h6M12 17v3M8 9.5h.01M12 9.5h.01M16 9.5h.01M9 13h6"/></symbol>
+    <symbol id="i-recommend" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10l4-7a2 2 0 0 1 2 2v4h5.5a2 2 0 0 1 2 2.4l-1.5 7A2 2 0 0 1 17 21H7zM7 10H4a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h3"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3V6zM9 3v15M15 6v15"/><circle cx="12" cy="11" r="2"/></symbol>
+    <symbol id="i-create" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3zM19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8L19 16zM4 16l.6 1.4L6 18l-1.4.6L4 20l-.6-1.4L2 18l1.4-.6L4 16z"/></symbol>
+    <symbol id="i-health" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-5 3 10 2.5-7 1.5 2h5"/><path d="M12 3.5a8.5 8.5 0 1 0 0 17 8.5 8.5 0 0 0 0-17z"/></symbol>
+    <symbol id="i-edu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5 2.5 9.5 12 14l9.5-4.5L12 5zM6 12v4.5c0 1.7 2.7 3 6 3s6-1.3 6-3V12M21.5 9.5v6"/></symbol>
+    <symbol id="i-industry" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l5 3V10l5 3V6l8 4v11H3zM7 18h2M12 18h2M17 18h2M16 3.5h3"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4c-9 0-15 3.5-15 10a5 5 0 0 0 5 5c6.5 0 10-6 10-15z"/><path d="M4 21c2-5 5.5-8.5 11-11"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v5.5c0 5 3.2 8.3 7.5 9.5 4.3-1.2 7.5-4.5 7.5-9.5V6L12 3z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4 2.8 20h18.4L12 4zM12 10v4M12 17h.01"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5 14 9l6.5 2-6.5 2-2 6.5-2-6.5L3.5 11 10 9l2-6.5zM19 3v3M17.5 4.5h3"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7v5h-5"/><path d="M4 17v-5h5"/><path d="M18.5 9A7 7 0 0 0 6 7.2L4 9M5.5 15A7 7 0 0 0 18 16.8L20 15"/></symbol>
+    <symbol id="i-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 15v5h-5M4 15v5h5M20 9V4h-5"/></symbol>
+  </svg>
+
+  <canvas id="bgCanvas" aria-hidden="true"></canvas>
+  <div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <!-- شريط التقدم -->
+  <div class="progress" aria-hidden="true"><div class="progress-bar" id="progressBar"></div></div>
+
+  <div class="topbar">
+    <div class="brand"><span class="brand-mark">✦</span><span>الذكاء الاصطناعي <i>/</i> رحلة معرفية</span></div>
+    <button class="icon-btn" id="fullscreenBtn" type="button" aria-label="تفعيل وضع ملء الشاشة" title="ملء الشاشة">
+      <svg class="icon"><use href="#i-expand"></use></svg>
+    </button>
+  </div>
+
+  <main class="deck" id="deck">
+
+    <!-- ========== الشريحة 01: الغلاف ========== -->
+    <section class="slide slide--1 is-active" aria-label="الشريحة 1 من 11: الغلاف">
+      <div class="slide-inner cover-layout">
+        <div class="cover-copy">
+          <p class="kicker" data-reveal style="--d:0">عرض تقديمي · مستقبل التقنية</p>
+          <h1 class="cover-title" data-reveal style="--d:1">الذكاء<span class="grad-text">الاصطناعي</span></h1>
+          <p class="cover-subtitle" data-reveal style="--d:2">من فكرة إلى عالم يصنع المستقبل</p>
+          <p class="lead cover-lead" data-reveal style="--d:3">لم تعد الآلات مجرد أدوات تنفذ الأوامر، بل أصبحت قادرة على التعلم وتحليل المعلومات والمساعدة في صناعة القرارات.</p>
+          <div class="chips" data-reveal style="--d:4">
+            <span class="chip">التعلم</span><span class="chip">الأنماط</span><span class="chip">القرار</span><span class="chip">الإبداع</span>
+          </div>
+          <p class="cover-cta" data-reveal style="--d:5"><span class="pulse-dot"></span> رحلة إلى عالم الذكاء الاصطناعي.</p>
+          <p class="hint" data-reveal style="--d:6">استخدم الأسهم أو المسافة للتنقل بين الشرائح</p>
+        </div>
+
+        <div class="cover-visual" data-reveal style="--d:2" aria-hidden="true">
+          <div class="brain-stage">
+            <svg class="brain-svg" viewBox="0 0 560 560" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="brainAura"><stop offset="0" stop-color="#2f7bff" stop-opacity=".38"/><stop offset=".6" stop-color="#7c4dff" stop-opacity=".12"/><stop offset="1" stop-color="#7c4dff" stop-opacity="0"/></radialGradient>
+                <linearGradient id="brainFillA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3ea8ff" stop-opacity=".85"/><stop offset="1" stop-color="#2452d8" stop-opacity=".42"/></linearGradient>
+                <linearGradient id="brainFillB" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b06bff" stop-opacity=".85"/><stop offset="1" stop-color="#5b2ed6" stop-opacity=".42"/></linearGradient>
+                <filter id="brainGlow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="9" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                <path id="hemi" d="M280 150c-30-22-72-18-90 8-32-6-58 18-53 49-27 15-33 51-12 72-11 31 11 63 43 67 10 30 46 44 72 24 18 12 40 4 40-20V150z"/>
+              </defs>
+              <circle cx="280" cy="280" r="260" fill="url(#brainAura)"/>
+              <g class="orbit orbit-a"><circle cx="280" cy="280" r="222" fill="none" stroke="#54b8ff" stroke-opacity=".4" stroke-width="1.2" stroke-dasharray="3 11"/></g>
+              <g class="orbit orbit-b"><ellipse cx="280" cy="280" rx="245" ry="120" fill="none" stroke="#a174ff" stroke-opacity=".35" stroke-width="1.2" transform="rotate(-26 280 280)"/></g>
+              <g class="orbit orbit-c"><circle cx="280" cy="280" r="178" fill="none" stroke="#8ee9ff" stroke-opacity=".18" stroke-width="1"/></g>
+              <g stroke="#69c6ff" stroke-opacity=".45" stroke-width="1.4" fill="none">
+                <path d="M280 150 280 58M190 158 92 118M137 207 42 222M125 279 38 306M168 346 98 420M240 370 216 470"/>
+                <path d="M280 150 280 58M370 158 468 118M423 207 518 222M435 279 522 306M392 346 462 420M320 370 344 470"/>
+              </g>
+              <g filter="url(#brainGlow)">
+                <use href="#hemi" fill="url(#brainFillA)" stroke="#6fd0ff" stroke-opacity=".85" stroke-width="1.6"/>
+                <use href="#hemi" transform="translate(560 0) scale(-1 1)" fill="url(#brainFillB)" stroke="#b98bff" stroke-opacity=".85" stroke-width="1.6"/>
+              </g>
+              <g class="brain-lines" fill="none" stroke="#e8f6ff" stroke-opacity=".55" stroke-width="1.5" stroke-linecap="round">
+                <path id="fold" d="M278 182c-38-8-68 10-73 40-28 0-43 27-28 49-15 26 6 54 35 50 8 25 38 29 56 13"/>
+                <use href="#fold" transform="translate(560 0) scale(-1 1)"/>
+                <path d="M280 150v220M280 262c-20 0-34 14-34 30M280 262c20 0 34 14 34 30"/>
+              </g>
+              <g class="brain-nodes" fill="#eaffff">
+                <circle cx="205" cy="222" r="5"/><circle cx="159" cy="271" r="4"/><circle cx="208" cy="321" r="4.5"/><circle cx="252" cy="192" r="3.6"/>
+                <circle cx="355" cy="222" r="5"/><circle cx="401" cy="271" r="4"/><circle cx="352" cy="321" r="4.5"/><circle cx="308" cy="192" r="3.6"/>
+              </g>
+              <g class="outer-nodes" fill="#38d9ff">
+                <circle cx="280" cy="58" r="6"/><circle cx="92" cy="118" r="4.5"/><circle cx="42" cy="222" r="5"/><circle cx="38" cy="306" r="4"/><circle cx="98" cy="420" r="5"/><circle cx="216" cy="470" r="4.5"/>
+                <circle cx="468" cy="118" r="4.5"/><circle cx="518" cy="222" r="5"/><circle cx="522" cy="306" r="4"/><circle cx="462" cy="420" r="5"/><circle cx="344" cy="470" r="4.5"/>
+              </g>
+            </svg>
+            <div class="orbit-label orbit-label--one">DATA</div>
+            <div class="orbit-label orbit-label--two">LEARN</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== الشريحة 02: مقدمة ========== -->
+    <section class="slide slide--2" aria-label="الشريحة 2 من 11: هل تستطيع الآلة أن تتعلم؟">
+      <div class="slide-inner split-layout">
+        <div class="split-copy">
+          <p class="kicker" data-reveal style="--d:0">02 · مقدمة</p>
+          <h2 class="slide-title" data-reveal style="--d:1">هل تستطيع الآلة أن تتعلم؟</h2>
+          <p class="lead question-lead" data-reveal style="--d:2">كيف يستطيع هاتفك التعرف على وجهك؟ وكيف تقترح عليك المنصات مقاطع قد تعجبك؟ وكيف تستطيع بعض البرامج فهم الأسئلة والإجابة عنها؟</p>
+          <p class="note" data-reveal style="--d:3">هذه المواقف ليست سحراً… إنها ذكاء اصطناعي أصبح جزءاً من حياتنا اليومية.</p>
+          <div class="axis-list" data-reveal style="--d:4" role="group" aria-label="محاور الذكاء الاصطناعي">
+            <button class="axis-card is-selected" type="button" data-axis="data" aria-pressed="true">
+              <span class="axis-icon"><svg class="icon"><use href="#i-data"></use></svg></span>
+              <span><strong>التعلم من البيانات</strong><small>اكتساب المعرفة من الأمثلة والملاحظات.</small></span>
+            </button>
+            <button class="axis-card" type="button" data-axis="pattern" aria-pressed="false">
+              <span class="axis-icon"><svg class="icon"><use href="#i-pattern"></use></svg></span>
+              <span><strong>تحليل الأنماط</strong><small>اكتشاف العلاقات والقواعد الخفية.</small></span>
+            </button>
+            <button class="axis-card" type="button" data-axis="solve" aria-pressed="false">
+              <span class="axis-icon"><svg class="icon"><use href="#i-puzzle"></use></svg></span>
+              <span><strong>المساعدة في حل المشكلات</strong><small>اقتراح حلول ودعم القرار.</small></span>
+            </button>
+          </div>
+          <p class="axis-detail no-swipe" id="axisDetail" aria-live="polite" data-reveal style="--d:5">البيانات هي الوقود: كل صورة أو نص أو رقم يمثّل مثالاً يتعلم منه النظام.</p>
+        </div>
+
+        <div class="visual-col" data-reveal style="--d:3">
+          <div class="scan-card">
+            <div class="scan-frame">
+              <span class="corner c-tl"></span><span class="corner c-tr"></span><span class="corner c-bl"></span><span class="corner c-br"></span>
+              <svg class="icon scan-face"><use href="#i-face"></use></svg>
+              <span class="scan-line"></span>
+              <span class="scan-tag">FACE ID · 98%</span>
+            </div>
+            <div class="signal-row"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            <p class="scan-caption">التعرف على الوجه مثال يومي على تعلم الآلة</p>
+          </div>
+          <div class="float-question q1">كيف عرفني؟</div>
+          <div class="float-question q2">ما رأيك؟</div>
+          <div class="float-question q3">اقتراح مناسب!</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== الشريحة 03: ما الذكاء الاصطناعي؟ ========== -->
+    <section class="slide slide--3" aria-label="الشريحة 3 من 11: ما الذكاء الاصطناعي؟">
+      <div class="slide-inner">
+        <header class="head-center">
+          <p class="kicker" data-reveal style="--d:0">03 · المفهوم</p>
+          <h2 class="slide-title" data-reveal style="--d:1">ما الذكاء الاصطناعي؟</h2>
+          <p class="lead center" data-reveal style="--d:2">مجال من علوم الحاسب يهتم بتطوير أنظمة تستطيع تنفيذ مهام تتطلب عادةً قدرات بشرية، مثل التعلم والاستنتاج وفهم اللغة والتعرف على الصور.</p>
+        </header>
+        <div class="venn-layout">
+          <div class="venn-wrap" data-reveal style="--d:3" aria-label="علاقة الاحتواء بين الذكاء الاصطناعي وتعلم الآلة والتعلم العميق">
+            <svg class="venn-svg" viewBox="0 0 420 360" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="vennA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2f7bff" stop-opacity=".38"/><stop offset="1" stop-color="#2f7bff" stop-opacity=".06"/></linearGradient>
+                <linearGradient id="vennB" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9b5cff" stop-opacity=".42"/><stop offset="1" stop-color="#9b5cff" stop-opacity=".1"/></linearGradient>
+                <linearGradient id="vennC" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#38d9ff" stop-opacity=".55"/><stop offset="1" stop-color="#38d9ff" stop-opacity=".2"/></linearGradient>
+              </defs>
+              <circle cx="210" cy="180" r="155" fill="url(#vennA)" stroke="#4b9bff" stroke-width="1.6" stroke-opacity=".8"/>
+              <circle cx="210" cy="192" r="108" fill="url(#vennB)" stroke="#a77bff" stroke-width="1.6" stroke-opacity=".85"/>
+              <circle cx="210" cy="202" r="60" fill="url(#vennC)" stroke="#67e4ff" stroke-width="1.6"/>
+              <text class="venn-label vlabel-ai" x="210" y="44">الذكاء الاصطناعي</text>
+              <text class="venn-label vlabel-ml" x="210" y="96">تعلم الآلة</text>
+              <text class="venn-label vlabel-dl" x="210" y="199">التعلم العميق</text>
+              <text class="venn-en" x="210" y="222">Deep Learning</text>
+            </svg>
+            <span class="venn-hint">كل دائرة أصغر… داخل الأكبر</span>
+          </div>
+          <div class="concept-list">
+            <article class="concept-card" data-reveal style="--d:4">
+              <span class="concept-num">01</span>
+              <div><h3>الذكاء الاصطناعي <em>AI</em></h3><p>المظلة العامة: أي نظام يؤدي مهاماً تحتاج ذكاءً بشرياً.</p></div>
+              <svg class="icon"><use href="#i-brain"></use></svg>
+            </article>
+            <article class="concept-card" data-reveal style="--d:5">
+              <span class="concept-num">02</span>
+              <div><h3>تعلم الآلة <em>Machine Learning</em></h3><p>فرع منه: خوارزميات تحسّن أداءها بالبيانات بدلاً من البرمجة المباشرة.</p></div>
+              <svg class="icon"><use href="#i-layers"></use></svg>
+            </article>
+            <article class="concept-card" data-reveal style="--d:6">
+              <span class="concept-num">03</span>
+              <div><h3>التعلم العميق <em>Deep Learning</em></h3><p>جزء أخص منه: شبكات عصبية متعددة الطبقات تتعلم تمثيلات معقدة.</p></div>
+              <svg class="icon"><use href="#i-network"></use></svg>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== الشريحة 04: كيف تتعلم الآلات؟ ========== -->
+    <section class="slide slide--4" aria-label="الشريحة 4 من 11: كيف تتعلم الآلات؟">
+      <div class="slide-inner">
+        <header class="head-row">
+          <div>
+            <p class="kicker" data-reveal style="--d:0">04 · آلية التعلم</p>
+            <h2 class="slide-title" data-reveal style="--d:1">من البيانات إلى المعرفة</h2>
+          </div>
+          <p class="lead compact" data-reveal style="--d:2">رحلة قصيرة يمرّ بها أي نظام متعلم: أربع مراحل متصلة.</p>
+        </header>
+
+        <div class="flow-wrap" data-reveal style="--d:3" aria-hidden="true">
+          <svg class="flow-svg" viewBox="0 0 1000 90" preserveAspectRatio="none">
+            <path class="flow-track" d="M45 45H955"/>
+            <path class="flow-track-glow" d="M45 45H955"/>
+            <circle class="flow-dot" r="7" fill="#8ce9ff"><animateMotion path="M45 45H955" dur="3.4s" begin="0s" repeatCount="indefinite"/></circle>
+            <circle class="flow-dot" r="5" fill="#b490ff"><animateMotion path="M45 45H955" dur="3.4s" begin="1.15s" repeatCount="indefinite"/></circle>
+            <circle class="flow-dot" r="5" fill="#38d9ff"><animateMotion path="M45 45H955" dur="3.4s" begin="2.3s" repeatCount="indefinite"/></circle>
+          </svg>
+        </div>
+
+        <div class="steps-grid">
+          <article class="step-card" data-reveal style="--d:4">
+            <span class="step-index">1</span>
+            <svg class="icon"><use href="#i-data"></use></svg>
+            <h3>البيانات</h3><p>جمع المعلومات والأمثلة.</p>
+          </article>
+          <article class="step-card" data-reveal style="--d:5">
+            <span class="step-index">2</span>
+            <svg class="icon"><use href="#i-pattern"></use></svg>
+            <h3>التدريب</h3><p>تحليل البيانات والتعرف على الأنماط.</p>
+          </article>
+          <article class="step-card" data-reveal style="--d:6">
+            <span class="step-index">3</span>
+            <svg class="icon"><use href="#i-brain"></use></svg>
+            <h3>النموذج</h3><p>بناء نظام يتعلم من الأمثلة.</p>
+          </article>
+          <article class="step-card" data-reveal style="--d:7">
+            <span class="step-index">4</span>
+            <svg class="icon"><use href="#i-spark"></use></svg>
+            <h3>التنبؤ</h3><p>استخدام ما تعلمه مع بيانات جديدة.</p>
+          </article>
+        </div>
+
+        <div class="example-strip" data-reveal style="--d:8">
+          <span class="example-label">مثال بسيط</span>
+          <div class="pet cat" aria-hidden="true"><span class="ear left"></span><span class="ear right"></span><b>• •</b><i></i></div>
+          <span class="pet-name">قطة</span>
+          <span class="plus">+</span>
+          <div class="pet dog" aria-hidden="true"><span class="ear drop left"></span><span class="ear drop right"></span><b>• •</b><i></i></div>
+          <span class="pet-name">كلب</span>
+          <span class="ex-arrow">← أمثلة كثيرة</span>
+          <span class="example-result">نموذج يميّز بينهما في صور جديدة <svg class="icon"><use href="#i-check"></use></svg></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== الشريحة 05: أنواع وتقنيات ========== -->
+    <section class="slide slide--5" aria-label="الشريحة 5 من 11: أنواع وتقنيات الذكاء الاصطناعي">
+      <div class="slide-inner">
+        <header class="head-center">
+          <p class="kicker" data-reveal style="--d:0">05 · التصنيفات</p>
+          <h2 class="slide-title" data-reveal style="--d:1">أنواع وتقنيات الذكاء الاصطناعي</h2>
+          <p class="lead center" data-reveal style="--d:2">تصنيفات مختلفة تساعدنا على فهم ما هو موجود اليوم، وما يزال في مجال البحث.</p>
+        </header>
+        <div class="type-grid">
+          <article class="type-card type--narrow" data-reveal style="--d:3">
+            <div class="type-head"><span class="type-icon"><svg class="icon"><use href="#i-puzzle"></use></svg></span><span class="type-badge">واقع اليوم</span></div>
+            <h3>الذكاء الاصطناعي الضيق</h3>
+            <p>أنظمة متخصصة في مهام محددة بدقة، تتقنها ولا تتجاوزها.</p>
+            <div class="type-example"><span>أمثلة</span>التعرف على الوجوه · الترجمة · التوصية</div>
+          </article>
+          <article class="type-card type--gen" data-reveal style="--d:4">
+            <div class="type-head"><span class="type-icon"><svg class="icon"><use href="#i-create"></use></svg></span><span class="type-badge badge-bright">تطور حديث</span></div>
+            <h3>الذكاء الاصطناعي التوليدي</h3>
+            <p>أنظمة تستطيع إنتاج نصوص وصور وأصوات ومحتوى جديداً بناءً على ما تعلمته.</p>
+            <div class="type-example"><span>أمثلة</span>كتابة النصوص · رسم الصور · توليد الصوت</div>
+          </article>
+          <article class="type-card type--agi" data-reveal style="--d:5">
+            <div class="type-head"><span class="type-icon"><svg class="icon"><use href="#i-brain"></use></svg></span><span class="type-badge badge-research">مفهوم بحثي</span></div>
+            <h3>الذكاء الاصطناعي العام</h3>
+            <p>ذكاء متعدد القدرات بمستوى يقارب القدرات البشرية، ولم يتحقق بعد بالشكل المفترض.</p>
+            <div class="type-example"><span>تنبيه</span>توقعات وأبحاث — ليس تقنية متاحة حالياً</div>
+          </article>
+        </div>
+        <p class="footnote" data-reveal style="--d:6">✦ التمييز بين ما هو مطبّق فعلاً وما هو توقع مستقبلي جزء من الثقافة الرقمية الواعية.</p>
+      </div>
+    </section>
+
+    <!-- ========== الشريحة 06: حولنا ========== -->
+    <section class="slide slide--6" aria-label="الشريحة 6 من 11: الذكاء الاصطناعي حولنا">
+      <div class="slide-inner">
+        <header class="head-row">
+          <div>
+            <p class="kicker" data-reveal style="--d:0">06 · التطبيقات اليومية</p>
+            <h2 class="slide-title" data-reveal style="--d:1">إنه أقرب إلينا مما نتخيل!</h2>
+          </div>
+          <p class="lead compact" data-reveal style="--d:2">ستة مواقف قد تمرّ بها في يوم واحد دون أن تلاحظ الذكاء الاصطناعي خلفها.</p>
+        </header>
+        <div class="apps-grid">
+          <article class="app-card" data-reveal style="--d:3" tabindex="0"><span class="app-icon c-blue"><svg class="icon"><use href="#i-phone"></use></svg></span><h3>الهواتف الذكية</h3><p>التعرف على الوجه لفتح الجهاز بأمان.</p></article>
+          <article class="app-card" data-reveal style="--d:4" tabindex="0"><span class="app-icon c-violet"><svg class="icon"><use href="#i-translate"></use></svg></span><h3>الترجمة الآلية</h3><p>ترجمة النصوص والكلام بين اللغات.</p></article>
+          <article class="app-card" data-reveal style="--d:5" tabindex="0"><span class="app-icon c-cyan"><svg class="icon"><use href="#i-assistant"></use></svg></span><h3>المساعدات الرقمية</h3><p>فهم الأسئلة والردّ على الأوامر الصوتية.</p></article>
+          <article class="app-card" data-reveal style="--d:6" tabindex="0"><span class="app-icon c-pink"><svg class="icon"><use href="#i-recommend"></use></svg></span><h3>أنظمة التوصية</h3><p>اقتراح مقاطع ومنتجات تناسب اهتماماتك.</p></article>
+          <article class="app-card" data-reveal style="--d:7" tabindex="0"><span class="app-icon c-green"><svg class="icon"><use href="#i-map"></use></svg></span><h3>الخرائط</h3><p>التنبؤ بالازدحام واقتراح أسرع الطرق.</p></article>
+          <article class="app-card" data-reveal style="--d:8" tabindex="0"><span class="app-icon c-amber"><svg class="icon"><use href="#i-create"></use></svg></span><h3>أدوات الإبداع</h3><p>إنشاء الصور والنصوص والمسودّات الأولية.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== الشريحة 07: في خدمة الإنسان ========== -->
+    <section class="slide slide--7" aria-label="الشريحة 7 من 11: الذكاء الاصطناعي في خدمة الإنسان">
+      <div class="slide-inner">
+        <header class="head-center">
+          <p class="kicker" data-reveal style="--d:0">07 · أثر إنساني</p>
+          <h2 class="slide-title" data-reveal style="--d:1">الذكاء الاصطناعي في خدمة الإنسان</h2>
+          <p class="lead center" data-reveal style="--d:2">حين يُستخدم بمسؤولية، يصبح أداة تدعم المختصين وتوسّع إمكاناتهم.</p>
+        </header>
+        <div class="field-grid">
+          <article class="field-card" data-reveal style="--d:3">
+            <div class="field-art art-health"><svg class="icon"><use href="#i-health"></use></svg><span class="pulse-line"></span></div>
+            <h3>الطب</h3><p>المساعدة في تحليل الصور الطبية ودعم المختصين في اكتشاف الأنماط.</p>
+          </article>
+          <article class="field-card" data-reveal style="--d:4">
+            <div class="field-art art-edu"><svg class="icon"><use href="#i-edu"></use></svg><span class="book-lines"></span></div>
+            <h3>التعليم</h3><p>شروحات وتدريبات تتناسب مع احتياجات المتعلم وسرعته.</p>
+          </article>
+          <article class="field-card" data-reveal style="--d:5">
+            <div class="field-art art-industry"><svg class="icon"><use href="#i-industry"></use></svg><span class="gear-lines"></span></div>
+            <h3>الصناعة</h3><p>مراقبة الجودة وتحسين كفاءة العمليات وتقليل الهدر.</p>
+          </article>
+          <article class="field-card" data-reveal style="--d:6">
+            <div class="field-art art-env"><svg class="icon"><use href="#i-leaf"></use></svg><span class="wave-line"></span></div>
+            <h3>البيئة</h3><p>تحليل البيانات المناخية ومتابعة التغيرات البيئية.</p>
+          </article>
+          <article class="field-card" data-reveal style="--d:7">
+            <div class="field-art art-sec"><svg class="icon"><use href="#i-shield"></use></svg><span class="radar-line"></span></div>
+            <h3>الأمن السيبراني</h3><p>المساعدة في رصد الأنشطة الرقمية غير المعتادة.</p>
+          </article>
+        </div>
+        <p class="footnote" data-reveal style="--d:8">✦ هذه أدوات مساندة لخبرة الإنسان، وليست بديلاً عن مسؤوليته وحكمه.</p>
+      </div>
+    </section>
+
+    <!-- ========== الشريحة 08: الوجه الآخر ========== -->
+    <section class="slide slide--8" aria-label="الشريحة 8 من 11: الوجه الآخر للتقنية">
+      <div class="slide-inner">
+        <header class="head-center head--light">
+          <p class="kicker" data-reveal style="--d:0">08 · استخدام مسؤول</p>
+          <h2 class="slide-title" data-reveal style="--d:1">هل الذكاء الاصطناعي مثالي؟</h2>
+          <p class="lead center" data-reveal style="--d:2">لكل تقنية قوة وتأثير، ولها أيضاً حدود ومخاطر تحتاج وعياً وممارسات واضحة.</p>
+        </header>
+        <div class="balance-grid">
+          <div class="balance-col challenges" data-reveal style="--d:3">
+            <div class="balance-head"><span class="bh-icon warn"><svg class="icon"><use href="#i-alert"></use></svg></span><h3>تحديات تحتاج انتباهاً</h3></div>
+            <ul class="balance-list">
+              <li>خصوصية البيانات</li>
+              <li>معلومات غير دقيقة</li>
+              <li>التحيز في نتائج الأنظمة</li>
+              <li>الاعتماد المفرط على التقنية</li>
+              <li>حقوق الملكية الفكرية</li>
+              <li>الاستخدام غير المسؤول</li>
+            </ul>
+          </div>
+          <div class="balance-divider" data-reveal style="--d:4" aria-hidden="true"><span>↔</span><small>وعي</small></div>
+          <div class="balance-col solutions" data-reveal style="--d:5">
+            <div class="balance-head"><span class="bh-icon ok"><svg class="icon"><use href="#i-check"></use></svg></span><h3>حلول وممارسات مسؤولة</h3></div>
+            <ul class="balance-list">
+              <li>التحقق من المعلومات قبل الاعتماد عليها</li>
+              <li>حماية البيانات الشخصية وتقليل مشاركتها</li>
+              <li>مراجعة النتائج بعين بشرية</li>
+              <li>استخدام التقنية بوعي وضمن حدودها</li>
+            </ul>
+            <div class="ethics-tag">مبادئ الأخلاقيات في الذكاء الاصطناعي — UNESCO / OECD</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== الشريحة 09: الاختبار التفاعلي ========== -->
+    <section class="slide slide--9" aria-label="الشريحة 9 من 11: تجربة تفاعلية">
+      <div class="slide-inner quiz-layout">
+        <div class="quiz-intro">
+          <p class="kicker" data-reveal style="--d:0">09 · تجربة تفاعلية</p>
+          <h2 class="slide-title" data-reveal style="--d:1">هل تستطيع تمييز الذكاء الاصطناعي؟</h2>
+          <p class="lead" data-reveal style="--d:2">ثلاثة أسئلة سريعة… اختر الإجابة ثم اقرأ التفسير. هذه التجربة جزء من العرض، لا تحتاج أي صفحة أخرى.</p>
+          <div class="quiz-deco" data-reveal style="--d:3" aria-hidden="true">
+            <span class="qd-ring"></span><span class="qd-core">؟</span><span class="qd-dot d1"></span><span class="qd-dot d2"></span><span class="qd-dot d3"></span>
+          </div>
+        </div>
+        <div class="quiz-panel" data-reveal style="--d:2">
+          <div id="quiz" class="quiz" aria-live="polite">
+            <noscript><p class="lead">يتطلب الاختبار تفعيل JavaScript.</p></noscript>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== الشريحة 10: المستقبل ========== -->
+    <section class="slide slide--10" aria-label="الشريحة 10 من 11: المستقبل">
+      <div class="slide-inner future-layout">
+        <header class="future-head">
+          <p class="kicker" data-reveal style="--d:0">10 · إلى أين نتجه؟</p>
+          <h2 class="slide-title" data-reveal style="--d:1">المستقبل… إلى أين نتجه؟</h2>
+          <span class="future-badge" data-reveal style="--d:2">توجهات وتوقعات · ليست حقائق قائمة</span>
+        </header>
+        <div class="future-track" data-reveal style="--d:3" aria-hidden="true">
+          <svg viewBox="0 0 1000 120" preserveAspectRatio="none"><path d="M20 110C260 20 740 20 980 110" fill="none" stroke="url(#futureGrad)" stroke-width="2" stroke-dasharray="6 10"/><defs><linearGradient id="futureGrad" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#2f7bff"/><stop offset=".5" stop-color="#38d9ff"/><stop offset="1" stop-color="#9b5cff"/></linearGradient></defs></svg>
+          <span class="horizon-sun"></span>
+        </div>
+        <div class="future-grid">
+          <article data-reveal style="--d:4"><span class="f-num">01</span><h3>مساعدات أذكى</h3><p>تفاعل أعمق مع اللغة والسياق.</p></article>
+          <article data-reveal style="--d:5"><span class="f-num">02</span><h3>خدمات أفضل</h3><p>تحسين الرعاية الصحية والتعليم.</p></article>
+          <article data-reveal style="--d:6"><span class="f-num">03</span><h3>تعاون الإنسان والآلة</h3><p>الآلة تقترح، والإنسان يقرر.</p></article>
+          <article data-reveal style="--d:7"><span class="f-num">04</span><h3>وظائف ومهارات جديدة</h3><p>الحاجة إلى مهارات رقمية وتفكير نقدي.</p></article>
+          <article data-reveal style="--d:8"><span class="f-num">05</span><h3>ثقافة رقمية وتعلم مستمر</h3><p>مواكبة التغيير بوعي ومسؤولية.</p></article>
+        </div>
+        <blockquote class="future-quote" data-reveal style="--d:9">«المستقبل لن تصنعه التقنية وحدها، بل سيصنعه الإنسان الذي يعرف كيف يستخدمها.»</blockquote>
+      </div>
+    </section>
+
+    <!-- ========== الشريحة 11: الخاتمة ========== -->
+    <section class="slide slide--11" aria-label="الشريحة 11 من 11: الخاتمة والمراجع">
+      <div class="slide-inner closing-layout">
+        <div class="closing-main">
+          <p class="kicker" data-reveal style="--d:0">11 · الخاتمة</p>
+          <h2 class="closing-title" data-reveal style="--d:1">المستقبل يبدأ <span class="grad-text">بفكرة!</span></h2>
+          <p class="lead" data-reveal style="--d:2">الذكاء الاصطناعي ليس مجرد تقنية جديدة، بل تحول في طريقة تفكيرنا وعملنا وتعلمنا.</p>
+          <p class="lead" data-reveal style="--d:3">كلما فهمنا هذه التقنية، أصبحنا أكثر قدرة على الاستفادة منها وتوجيهها نحو مستقبل أفضل.</p>
+          <div class="closing-messages" data-reveal style="--d:4">
+            <span><svg class="icon"><use href="#i-edu"></use></svg> تعلّم التقنية</span>
+            <span><svg class="icon"><use href="#i-shield"></use></svg> استخدمها بوعي</span>
+            <span><svg class="icon"><use href="#i-spark"></use></svg> اجعل الإبداع إنسانياً</span>
+          </div>
+          <p class="thanks" data-reveal style="--d:5">شكراً لحسن استماعكم ✦</p>
+        </div>
+        <aside class="references" data-reveal style="--d:5" aria-label="المراجع والمصادر">
+          <h3><svg class="icon"><use href="#i-data"></use></svg> مراجع ومصادر</h3>
+          <ol>
+            <li><a href="https://www.unesco.org/en/artificial-intelligence/recommendation-ethics" target="_blank" rel="noopener noreferrer">UNESCO — Recommendation on the Ethics of AI (2021)</a></li>
+            <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener noreferrer">NIST — AI Risk Management Framework</a></li>
+            <li><a href="https://oecd.ai/en/ai-principles" target="_blank" rel="noopener noreferrer">OECD — AI Principles</a></li>
+            <li><a href="https://www.deeplearningbook.org/" target="_blank" rel="noopener noreferrer">Goodfellow, Bengio & Courville — Deep Learning (2016)</a></li>
+            <li><a href="https://www.who.int/publications/i/item/9789240029200" target="_blank" rel="noopener noreferrer">WHO — Ethics and governance of AI for health (2021)</a></li>
+          </ol>
+          <p class="ref-note">تم صياغة المحتوى بأسلوب مبسّط من مصادر تعليمية موثوقة، مع التمييز بين التطبيقات القائمة والتوقعات المستقبلية.</p>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- أدوات التنقل -->
+  <div class="counter" id="counter" role="status" aria-live="polite" aria-label="رقم الشريحة">
+    <span class="counter-now" id="current">01</span><span class="counter-sep">/</span><span class="counter-total" id="total">11</span>
+  </div>
+  <nav class="nav" aria-label="التنقل بين الشرائح">
+    <button class="nav-btn nav-btn--prev" id="prevBtn" type="button" aria-label="الشريحة السابقة" title="السابق (→)"><span aria-hidden="true">→</span><span class="nav-text">السابق</span></button>
+    <button class="nav-btn nav-btn--next" id="nextBtn" type="button" aria-label="الشريحة التالية" title="التالي (←)"><span class="nav-text">التالي</span><span aria-hidden="true">←</span></button>
+  </nav>
+  <div class="key-hint" aria-hidden="true">Space / ← / →</div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
